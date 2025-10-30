@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="./img/cerebro_ninja.png" alt="logo">
+        <h1>JUEGO DE MEMORIA</h1>
+        <img src="./img/cerebro_shuriken.png" alt="logo">
+    </header>
+
+    <main class="main-login">
+        <section class="contenedor-login">
+            <h2>Iniciar Sesión</h2>
+            <form class="formulario-login">
+                <label for="usuario">Usuario:</label>
+                <input type="text" class="campo-texto" id="usuario" name="usuario" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" class="campo-texto" id="password" name="password" required>
+            </form>
+            <button class="boton" id="boton-login" type="button">LOGIN</button>
+        </section>
+        <div id="login-incorrecto" class="login-incorrecto">
+            <p id="mensaje-login"></p>
+        </div>
+    </main>
+    <footer>
+        <p>Nadia Judith Argüello | Creative Commons Attribution 4.0 International (CC BY 4.0)</p>
+    </footer>
+    <script src="./main/main.js"></script>
+</body>
+
+</html>

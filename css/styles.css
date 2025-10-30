@@ -1,0 +1,509 @@
+/*Estilos Generales comunes en todas las paginas*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    font-family: 'Bungee', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgb(255, 255, 0);
+    color: #540B0C;
+    background-size: 60%;
+    font-size: 2rem;
+}
+
+header h1 {
+    font-family: 'Bungee', sans-serif;
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #00eaff;
+    /* color principal del tubo */
+    /* contorno ligero */
+    -webkit-text-stroke: 1px #ffffff;
+    /* efecto de brillo tipo neón */
+    text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #ff00ff, 0 0 80px #ff00ff;
+    text-align: center;
+}
+
+header img {
+    height: 100%;
+}
+
+header img:first-child {
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+}
+
+main {
+    min-height: 80vh;
+    background-image: url('../img/fondo_tematico.png');
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: yellow;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+footer p {
+    font-family: 'Bungee', sans-serif;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.boton {
+    margin-top: 20px;
+    height: 2rem;
+    width: 250px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #e83cd9, #a61299);
+    /* efecto volumen */
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #b317a8;
+    /* borde base */
+    box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.3), /* brillo interior arriba */
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3), /* sombra interior abajo */
+    0 4px 6px rgba(0, 0, 0, 0.4);
+    /* sombra externa */
+    cursor: pointer;
+    transition: transform 0.1s ease;
+}
+
+.boton:active {
+    transform: translateY(2px);
+    /* pequeño "hundimiento" al hacer clic */
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*Estilos ESPECÍFICOS de la página LOGIN-*/
+
+.main-login {
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-login {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    height: 60%;
+    padding: 3%;
+    background-color: pink;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    /* sombra inferior difusa */
+}
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-texto {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 3px solid #ffffff;
+    height: 20%;
+    width: 40vw;
+}
+
+.login-incorrecto {
+    width: 30vw;
+    height: 5vh;
+    display: flex;
+    background-color: PINK;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.login-incorrecto img {
+    height: 65px;
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*Estilos ESPECÍFICOS de la página BIENVENIDA-*/
+
+.main-bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.cabecera-bienvenida {
+    background-color: pink;
+    padding: 10px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.seleccion-nivel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 100vw;
+}
+
+.tableroPrincip,
+.tableroMedio,
+.tableroAvanz {
+    display: grid;
+    aspect-ratio: 1 / 1;
+    width: 15vw;
+}
+
+.tableroPrincip {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.tableroMedio {
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.tableroAvanz {
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.unidad-casilla {
+    aspect-ratio: 1 / 1;
+    background-color: #07d5e7;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nivel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    width: 20vw;
+}
+
+.nivel h3 {
+    font-family: 'Bungee', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00eaff;
+    /* color principal del tubo */
+    /* contorno ligero */
+    -webkit-text-stroke: 1px #ffffff;
+    /* efecto de brillo tipo neón */
+    text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 40px #ff00ff, 0 0 80px #ff00ff;
+    text-align: center;
+    margin: 0px;
+}
+
+.nivel img {
+    width: 100%;
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*Estilos ESPECÍFICOS de la página JUEGO-*/
+
+.main-juego {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.main-juego aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 20vw;
+    font-size: 1rem;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-juego p {
+    background-color: pink;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.boton-juego {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    border: 5px solid white;
+    background-color: #07d5e7;
+    padding: 10px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#boton-pausa {
+    background-image: url('../img/pause.svg');
+}
+
+#boton-recarga {
+    background-image: url('../img/reload.svg');
+    color: white;
+    background-size: 70%;
+}
+
+.tablero-juego {
+    height: 75vh;
+    aspect-ratio: 1/1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 5px solid #e70bc3;
+    padding: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.tablero-juego table {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.tablero-juego td {
+    aspect-ratio: 1 / 1;
+    border: 2px solid white;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.tablero-juego .cell {
+    background-color: #07d5e7;
+    position: relative;
+    z-index: 1; 
+    overflow: hidden; 
+    transition: transform 0.3s ease;
+}
+
+.tablero-juego .cell.oculta {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tablero-juego .cell.oculta:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+.tablero-juego .cell.oculta::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.tablero-juego .cell.oculta:hover::before {
+    transform: translateX(100%);
+}
+
+.tablero-juego .cell.descubierta {
+    z-index: 0; 
+}
+
+.temporizador-juego,
+.pares-encontrados {
+    background-color: #07d5e7;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid white;
+    color: white;
+    font-size: 2rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/*-----------------------------------------------------------------------------------------------*/
+
+
+/*Estilos ESPECÍFICOS de la página RESULTADO-*/
+
+.main-resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    gap: 30px;
+}
+
+.main-resultado h1 {
+    font-size: 3rem;
+    margin: 0px
+}
+
+.resultado-central {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    height: 50vh;
+    width: 100%;
+}
+
+.imagen-resultado {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.resumen-resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    aspect-ratio: 1.5/1;
+    background-color: pink;
+    padding: 10px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    gap: opx;
+}
+
+.resumen-resultado p {
+    font-size: 1.5rem;
+}
+
+.resumen-resultado img {
+    height: 30%;
+    align-self: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+.texto-resumen-resultado {
+    padding: 20px;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+#img-resultado-izq {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scaleX(-1);
+}
+
+#img-resultado-dcha {
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#boton-salir,
+#boton-jugar {
+    margin: 0px;
+}

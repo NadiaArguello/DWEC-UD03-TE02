@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <header>
+        <img src="../img/cerebro_ninja.png" alt="logo">
+        <h1>JUEGO DE MEMORIA</h1>
+        <img src="../img/cerebro_shuriken.png" alt="logo">
+    </header>
+
+    <main class="main-juego">
+        <aside>
+            <p>Para pausar el juego, posiciónate sobre el simbolo de pausa.</p>
+            <div class="boton-juego boton-pausa" id="boton-pausa">
+            </div>
+            <div class="boton-juego boton-recarga" id="boton-recarga">
+            </div>
+        </aside>
+
+        <section class="tablero-juego" id="tablero-juego">
+        </section>
+
+        <aside>
+            <article>
+                <p>Tiempo restante:</p>
+                <div class="temporizador-juego">00:00</div>
+            </article>
+            <article>
+                <p>Pares por encontrar:</p>
+                <div class="pares-encontrados">0</div>
+            </article>
+        </aside>
+    </main>
+
+    <footer>
+        <p>Nadia Judith Argüello | Creative Commons Attribution 4.0 International (CC BY 4.0)</p>
+    </footer>
+    <script src="../main/main.js"></script>
+    <audio id="bgm" src="../audio/cancion_principal.mp3" preload="auto" autoplay loop></audio>
+</body>
+
+</html>

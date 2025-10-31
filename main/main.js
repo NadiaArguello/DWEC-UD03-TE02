@@ -1,7 +1,7 @@
 // ------------------------------  CARGA INICIAL DE DATOS --------------------------
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const page = window.location.pathname.split('/').pop(); //Guarda en una constante la página actual
+    const page = window.location.pathname.split('/').pop() || 'index.html'; //Guarda en una constante la página actual
 
     //En función de cual es la página actual, ejecutará unas órdenes u otras
     switch (page) {
@@ -87,4 +87,5 @@ document.addEventListener('DOMContentLoaded', async () => {
             break;
         }
     }
+
 });
